@@ -1,0 +1,7 @@
+{
+  "id": "rule_db_not_public",
+  "type": "database",
+  "field": "public",
+  "expected": false,
+  "message": "La base de données ne doit pas être publique."
+}
