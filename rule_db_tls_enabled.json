@@ -1,0 +1,7 @@
+{
+  "id": "db_tls_enabled",
+  "type": "database",
+  "field": "tls",
+  "expected": true,
+  "message": "TLS doit être activé pour la base de données."
+}
