@@ -1,5 +1,5 @@
 import json
-from check_rule import check_rule
+from engine import check_rule
 import os
 
 def load_json(path):
@@ -7,10 +7,10 @@ def load_json(path):
         return json.load(f)
 
 # Charger la règle 
-rule = load_json("../rule_not_public_ip.json")
+rule = load_json("rule_not_public_ip.json")
 
 # Choisir l'architecture à tester (modifier pour mettre le nom du fichier à tester )
-architecture = load_json("../resources/architecture_ok.json")
+architecture = load_json("resources/architecture_ok.json")
 
 print("\n🔍 Vérification de la règle de sécurité\n")
 
