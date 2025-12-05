@@ -1,0 +1,6 @@
+{
+    "db1": {
+        "type": "database",
+        "ip_public": true
+    }
+}
