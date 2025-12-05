@@ -1,19 +1,33 @@
 
+ Objectif
+
+Ce repo permet à l’équipe :
+
+de valider une partie de la sécurité de leurs architectures JSON
+de préparer l’intégration du moteur dans le projet final
+
+La règle concernée est dans le fichier "rule_not_publique_ip.json". Elle va détecter automatiquement si une DB générée a une IP publique.
+
+Cela permet :
+
+d’alerter l’utilisateur avant le déploiement, d’empêcher la génération d’infrastructure non sécurisée. 
+
+
 Les fichiers JSON de test sont dans resources/ :
 
 architecture_ok.json
 architecture_ko.json
 
-Le fichier rule_not_publique_ip.json définit la règle à appliquer.
+Donc comme dit plus haut, le fichier rule_not_publique_ip.json définit la règle à appliquer.
 
-run_check.py charge la règle et un fichier JSON d’architecture depuis /resources.
+run_check.py charge la règle et un fichier JSON d’architecture depuis /resources (le fichier à tester par exemple).
 
-engine.py contient la fonction qui teste chaque ressource par rapport à la règle.
+Le fichier "engine.py" contient la fonction qui teste chaque ressource par rapport à la règle.
 
-run_check.py affiche si chaque ressource respecte ou viole la règle.
-ce dépot  contient un moteur minimaliste pour tester UNE SEULE règle de sécurité :
+Le fichier "run_check.py" affiche si chaque ressource respecte ou viole la règle.
+ce dépot contient un moteur minimaliste pour tester UNE SEULE règle de sécurité :
 
- La base de données ne doit pas avoir d'IP publique.
+
 
 
 
@@ -47,17 +61,5 @@ python run_check.py
 Si la base de données n’a pas d’IP publique → OK
 Si la base de données a une IP publique → ERREUR
 
- Objectif
-
-Ce repo permet à l’équipe :
-
-de valider la sécurité de leurs architectures JSON
-de préparer l’intégration du moteur dans le projet final
-
-Cette règle rule_not_publique_ip.json va détecter automatiquement si une DB générée a une IP publique.
-
-Cela permet :
-
-d’alerter l’utilisateur avant le déploiement, d’empêcher la génération d’infrastructure non sécurisée. 
 
 
