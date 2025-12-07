@@ -35,17 +35,13 @@ Comment tester la règle ?
 
 1. Installer Python 3
 2. Ouvrir un terminal
-3. Aller dans le dossier `engine` :
-
-cd engine
-
-4. Lancer le test :
-
+3. Se déplacer dans le projet dossier et lancer le test :
+   
 python run_check.py
 
  Le script analysera un fichier JSON d’architecture (défini dans `run_check.py`) et affichera si la règle est respectée ou non.
 
-Donc pour tester vos propres fichiers, il suffit de l'ajouter dans le dossier "/resources" : resources/mon_architecture.json
+Donc pour tester vos propres fichiers, il suffit de les ajouter dans le dossier "/resources" : resources/mon_architecture.json
 
 puis dans le fichier "run_check.py", changez la ligne qui charge l’architecture :
 
